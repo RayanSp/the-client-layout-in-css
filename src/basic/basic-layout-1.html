@@ -5,9 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic Layout 1</title>
     <link rel="stylesheet" href="../style.css" />
-    <style>
-      /* Doe hier jouw ding! */
-    </style>
+    <style>   
+  body {
+    gap: .75em;
+    display: grid;
+    grid-template-columns: 0fr .5fr 3fr 2fr;
+    grid-template-rows: 2fr 7fr 1fr;
+    grid-template-areas:
+      ". kop kop ."
+      ". navigatie inhoud ."
+      ". footer footer .";
+}
+
+header {
+  grid-area: kop;
+}
+
+nav {
+  grid-area: navigatie;
+}
+
+main {
+  grid-area: inhoud;
+}
+
+footer {
+  grid-area: footer;
+}
+
+</style>
+
   </head>
   <body id="basic-layout-1">
     <header><h1>Basic Layout 1</h1></header>

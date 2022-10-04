@@ -6,7 +6,31 @@
     <title>Basic Layout 8</title>
     <link rel="stylesheet" href="../style.css" />
     <style>
-      /* Doe hier jouw ding! */
+      body {
+    gap: .75em;
+    display: grid;
+    grid-template-columns: 1.5fr .7fr .6fr .7fr 1.5fr;
+    grid-template-rows: .9fr 3fr;
+    grid-template-areas:
+      ". kop kop kop ."
+      ". navigatie inhoud footer ."
+}
+
+header {
+  grid-area: kop;
+}
+
+nav {
+  grid-area: navigatie;
+}
+
+main {
+  grid-area: inhoud;
+}
+
+footer {
+  grid-area: footer;
+}
     </style>
   </head>
   <body id="basic-layout-8">
